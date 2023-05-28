@@ -46,8 +46,8 @@ public class WebSecurityConfig {
     @Bean
     public WebSecurityCustomizer webSecurityCustomizer() {
         return (web) -> web.ignoring()
-        		//.antMatchers("/airbusManagement/JWT/authenticateUser","/v3/api-docs/**","/swagger-ui/**","/swagger-ui.html")
-        		.antMatchers("/v3/api-docs");
+        		.antMatchers("/airbusManagement/JWT/authenticateUser","/v3/api-docs/**","/swagger-ui/**","/swagger-ui.html");
+        		//.antMatchers("/v3/api-docs");
     }    
 
     @Bean
@@ -57,9 +57,9 @@ public class WebSecurityConfig {
 		httpSecurity.cors().and().csrf().disable()
 				// dont authenticate this particular request
 				.authorizeRequests()
-				//.antMatchers("/airbusManagement/JWT/authenticateUser").permitAll()
+				.antMatchers("/airbusManagement/JWT/authenticateUser").permitAll()
 				//.antMatchers("/v3/api-docs/**","/swagger-ui/**","/swagger-ui.html").permitAll()
-				.antMatchers("/v3/api-docs").permitAll()
+				//.antMatchers("/v3/api-docs").permitAll()
 				// all other requests need to be authenticated
 				.anyRequest().authenticated().and()
 				// make sure we use stateless session; session won't be used to
