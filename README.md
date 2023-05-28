@@ -2,13 +2,13 @@
 
 ## Technology stack
 
-Maven
-Spring boot 2.7.9
-Spring Security
-Spring Jdbc
-My Sql Server
-Swagger (Open API Specification 3)
-Angular 10.0.3
+	1. Maven
+	2. Spring boot 2.7.9
+	3. Spring Security
+	4. Spring Jdbc
+	5. My Sql DB
+	6. Swagger (Open API Specification 3)
+	7. Angular 10.0.3
 
 ## Create the tables from the below script
 
