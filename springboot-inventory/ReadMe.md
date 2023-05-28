@@ -12,7 +12,7 @@ Post Request - http://localhost:8080/airbusManagement/JWT/authenticateUser
 
 Json Request
 
-{"username":"airbus02", 
+{"username":"airbus02@gmail.com", 
  "password":"1234"
 }
 

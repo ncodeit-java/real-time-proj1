@@ -18,6 +18,15 @@ import com.ncodeit.inventory.model.JwtResponse;
 import com.ncodeit.inventory.model.User;
 import com.ncodeit.inventory.service.JwtUserDetailsService;
 
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.Parameter;
+import io.swagger.v3.oas.annotations.Parameters;
+import io.swagger.v3.oas.annotations.enums.ParameterIn;
+import io.swagger.v3.oas.annotations.media.Content;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.responses.ApiResponses;
+
 @CrossOrigin(origins = "*", maxAge = 3600)
 @RestController
 @RequestMapping("/airbusManagement/JWT")
@@ -33,7 +42,11 @@ public class JwtAuthenticationController {
 	private JwtUserDetailsService userDetailsService;
 
 	@RequestMapping(value = "/authenticateUser", method = RequestMethod.POST)
-	public ResponseEntity<?> createAuthenticationToken(@RequestBody User authenticationRequest) throws Exception {
+	@Operation(description = "Login API")
+	@ApiResponses(value = {
+			@ApiResponse(responseCode ="200",content = {@Content(mediaType = "application/json",schema = @Schema(implementation = JwtResponse.class))})
+	})	
+	public ResponseEntity<JwtResponse> createAuthenticationToken(@RequestBody User authenticationRequest) throws Exception {
 
 		authenticate(authenticationRequest.getUsername(), authenticationRequest.getPassword());
 

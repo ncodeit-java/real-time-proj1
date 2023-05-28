@@ -16,4 +16,5 @@ springboot-inventory\src\main\resources\templates
 
 ## Swagger url
 
-http://localhost:8080/api/v3/api-docs 
+	1. For Json - http://localhost:8080/api/v3/api-docs
+	2. Swagger UI - http://localhost:8080/swagger-ui/index.html

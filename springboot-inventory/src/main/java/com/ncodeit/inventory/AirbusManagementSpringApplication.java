@@ -12,7 +12,7 @@ import io.swagger.v3.oas.annotations.servers.Server;
 @SpringBootApplication
 @OpenAPIDefinition(
 		info = @Info(title = "Inventory Management API", version = "2.0",description = "API's related to inventory system"),
-		servers = {@Server(url = "localhost:8080")}
+		servers = {@Server(url = "http://localhost:8080")}
 		)
 @SecurityScheme(
 		name = "Bearer",
