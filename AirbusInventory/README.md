@@ -4,5 +4,5 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Run below commands to start the server
 
-npm install
+npm install</br>
 ng serve --open 
